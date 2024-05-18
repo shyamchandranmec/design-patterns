@@ -2,12 +2,12 @@
   "name": "design-patterns",
   "version": "1.0.0",
   "description": "Design patterns using nodejs",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "observer": "npx tsc observer_pattern/main.ts && node observer_pattern/main.js",
-    "strategy": " node strategy_pattern/main.js"
+    "clean": "rm -rf dist",
+    "observer": "npm run clean && npx tsc --build && node dist/observer_pattern/main.js",
+    "strategy": "npm run clean && npx tsc --build && node dist/strategy_pattern/main.js"
   },
   "repository": {
     "type": "git",

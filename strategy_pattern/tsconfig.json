@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "outDir": "../dist/strategy_pattern",
+        "composite": true,
+    },
+}

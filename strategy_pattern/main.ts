@@ -1,8 +1,8 @@
 "use strict";
-import EmailNotification from './notifiers/EmailNotification.mjs';
-import PushNotification from './notifiers/PushNotification.mjs';
-import SMSNotification from './notifiers/SMSNotification.mjs';
-import NotificationService from './notification_service.mjs';
+import EmailNotification from './notifiers/EmailNotification';
+import PushNotification from './notifiers/PushNotification';
+import SMSNotification from './notifiers/SMSNotification';
+import NotificationService from './notification_service.js';
 
 const smsNotification = new SMSNotification()
 const notificationService = new NotificationService(smsNotification)

@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "outDir": "../dist/observer_pattern",
+        "composite": true,
+    },
+}
