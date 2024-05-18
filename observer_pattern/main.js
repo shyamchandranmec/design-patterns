@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var cricket_score_1 = require("./observables/cricket_score");
+var weather_station_1 = require("./observables/weather_station");
+var mobile_display_1 = require("./observers/mobile_display");
+var tv_display_1 = require("./observers/tv_display");
+var ws = new weather_station_1.default();
+var cs = new cricket_score_1.default();
+var tvDisplay = new tv_display_1.default();
+var mobileDisplay = new mobile_display_1.default();
+ws.addObserver(tvDisplay);
+ws.addObserver(mobileDisplay);
+cs.addObserver(mobileDisplay);
+ws.temperature = 10;
+ws.temperature = 20;
+cs.score = 50;

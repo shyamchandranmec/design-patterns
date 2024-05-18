@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/shyamchandranmec/design-patterns/issues"
   },
-  "homepage": "https://github.com/shyamchandranmec/design-patterns#readme"
+  "homepage": "https://github.com/shyamchandranmec/design-patterns#readme",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
 }
