@@ -1,20 +1,20 @@
 "use strict";
 
-import IVMContext from "../context/context_interface";
+import VendingMachine from "../context/vm_context";
 import IProduct from "../interfaces/i_product";
 import IVendingMachineState from "../interfaces/i_state";
 
 class VendingMachineState implements IVendingMachineState {
-    prompt(ctx:IVMContext): void {
+    prompt(ctx:VendingMachine): void {
         throw new Error("Method not implemented.");
     }
-    selectProduct(code:number , ctx: IVMContext): void {
+    selectProduct(code:number , ctx: VendingMachine): void {
         throw new Error("Method not implemented.");
     }
-    insertMoney(amount: number, ctx: IVMContext): void {
+    insertMoney(amount: number, ctx: VendingMachine): void {
         throw new Error("Method not implemented.");
     }
-    dispenseProduct(product: IProduct, ctx: IVMContext): void {
+    dispenseProduct(product: IProduct, ctx: VendingMachine): void {
         throw new Error("Method not implemented.");
     }
     
@@ -22,10 +22,10 @@ class VendingMachineState implements IVendingMachineState {
 
 class ReadyState extends VendingMachineState {
 
-    prompt(ctx:IVMContext): void {
+    prompt(ctx:VendingMachine): void {
         console.log("ReadyState: Available products ", ctx.products)
     }
-    selectProduct(code: number,  ctx: IVMContext): void {
+    selectProduct(code: number,  ctx: VendingMachine): void {
         console.log("User chose product ", code)
         let matches = ctx.products.filter((p)=> {
             return p.code == code
@@ -40,17 +40,17 @@ class ReadyState extends VendingMachineState {
         console.log("Moving to the next state with Selected product ", selectedProduct)
         ctx.setState(new ProductSelectedState())
     }
-    insertMoney(amount: number, ctx: IVMContext): void {
+    insertMoney(amount: number, ctx: VendingMachine): void {
         console.log("Please select a product before inserting money")
     }
 }
 
 class ProductSelectedState extends VendingMachineState {
 
-    prompt(ctx:IVMContext): void {
+    prompt(ctx:VendingMachine): void {
         console.log("ProductSelectedState: Insert money")
     }
-    insertMoney(amount: number, ctx: IVMContext): void {
+    insertMoney(amount: number, ctx: VendingMachine): void {
         console.log("VM balance is ", ctx.balance)
         console.log("User inserted money Rs", amount)
         ctx.balance+= amount
@@ -69,10 +69,10 @@ class ProductSelectedState extends VendingMachineState {
 
 class ProductDispenseState extends VendingMachineState {
 
-    prompt(ctx:IVMContext): void {
+    prompt(ctx:VendingMachine): void {
         console.log("ProductDispenseState: Dispensing Product ", ctx.selectedProduct)
     }
-    dispenseProduct(product: IProduct, ctx: IVMContext): void {
+    dispenseProduct(product: IProduct, ctx: VendingMachine): void {
         console.log("Dispensing product ", product)
         let remainingProducts = ctx.products.filter((p)=> {
             return p.code != product.code

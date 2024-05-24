@@ -3,10 +3,9 @@
 import IProduct from "../interfaces/i_product";
 import IVendingMachineState from "../interfaces/i_state";
 import { ReadyState } from "../states/vm_state";
-import IVMContext from "./context_interface";
 
 
-export default class VendingMachine implements IVMContext{
+export default class VendingMachine {
     products:Array<IProduct>
     state: IVendingMachineState
     selectedProduct: IProduct
