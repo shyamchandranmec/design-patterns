@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "outDir": "../dist/chain_of_responsibility_pattern",
+        "composite": true,
+    },
+}
