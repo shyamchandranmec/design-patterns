@@ -10,7 +10,8 @@
     "observer": "npm run clean && npx tsc --build && node dist/observer_pattern/main.js",
     "strategy": "npm run clean && npx tsc --build && node dist/strategy_pattern/main.js",
     "state": "npm run clean && npx tsc --build && node dist/state_pattern/main.js",
-    "chain": "npm run clean && npx tsc --build && node dist/chain_of_responsibility_pattern/main.js"
+    "chain": "npm run clean && npx tsc --build && node dist/chain_of_responsibility_pattern/main.js",
+    "command": "npm run clean && npx tsc --build && node dist/command_pattern/main.js"
   },
   "repository": {
     "type": "git",
