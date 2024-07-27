@@ -13,7 +13,8 @@
     "chain": "npm run clean && npx tsc --build && node dist/chain_of_responsibility_pattern/main.js",
     "command": "npm run clean && npx tsc --build && node dist/command_pattern/main.js",
     "template": "npm run clean && npx tsc --build && node dist/template_pattern/main.js",
-    "memento": "npm run clean && npx tsc --build && node dist/memento_pattern/main.js"
+    "memento": "npm run clean && npx tsc --build && node dist/memento_pattern/main.js",
+    "snl": "npm run clean && npx tsc --build && node dist/examples/snake_and_ladder/main.js"
   },
   "repository": {
     "type": "git",

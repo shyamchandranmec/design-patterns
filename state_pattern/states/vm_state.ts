@@ -58,7 +58,7 @@ class ProductSelectedState extends VendingMachineState {
             console.log("Amount not enough to buy product ", ctx.selectedProduct.name)
             console.log("Please add more money")
         } else {
-            console.log("Recievend Rs", amount)
+            console.log("Recieved Rs", amount)
             console.log("VM balance is", ctx.balance)
             console.log("Moving to the next state to dispense product", ctx.selectedProduct)
             ctx.setState(new ProductDispenseState())
