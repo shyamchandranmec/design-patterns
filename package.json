@@ -15,7 +15,8 @@
     "template": "npm run clean && npx tsc --build && node dist/template_pattern/main.js",
     "memento": "npm run clean && npx tsc --build && node dist/memento_pattern/main.js",
     "snl": "npm run clean && npx tsc --build && node dist/examples/snake_and_ladder/main.js",
-    "logger": "npm run clean && npx tsc --build && node dist/examples/logger/main.js"
+    "logger": "npm run clean && npx tsc --build && node dist/examples/logger/main.js",
+    "decorator": "npm run clean && npx tsc --build && node dist/decorator_pattern/main.js"
   },
   "repository": {
     "type": "git",
