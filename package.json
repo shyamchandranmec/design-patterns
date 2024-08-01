@@ -18,7 +18,8 @@
     "logger": "npm run clean && npx tsc --build && node dist/examples/logger/main.js",
     "decorator": "npm run clean && npx tsc --build && node dist/decorator_pattern/main.js",
     "composite_task": "npm run clean && npx tsc --build && node dist/composite_pattern/tasks/main.js",
-    "composite_arith": "npm run clean && npx tsc --build && node dist/composite_pattern/arithmetic_expression/main.js"
+    "composite_arith": "npm run clean && npx tsc --build && node dist/composite_pattern/arithmetic_expression/main.js",
+    "adapter": "npm run clean && npx tsc --build && node dist/adapter_pattern/main.js"
   },
   "repository": {
     "type": "git",
