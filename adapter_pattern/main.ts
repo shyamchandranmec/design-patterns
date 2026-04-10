@@ -1,9 +1,9 @@
 "use strict"
 
-import {LegacyPrinter, PrinterAdapter} from "./printer";
+import {LegacyPrinter, PrinterAdapter, IPrinter} from "./printer";
 
 let lp = new LegacyPrinter()
-let printer = new PrinterAdapter()
+let printer:IPrinter = new PrinterAdapter(lp)
 
 lp.printDocument()
 

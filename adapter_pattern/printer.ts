@@ -13,8 +13,8 @@ interface IPrinter {
 class PrinterAdapter implements IPrinter{
     private lPrinter:LegacyPrinter
 
-    constructor() {
-        this.lPrinter = new LegacyPrinter()
+    constructor(lPrinter: LegacyPrinter) {
+        this.lPrinter = lPrinter
     }
     print():void {
         console.log("Printing using adapter the following line")
@@ -23,5 +23,5 @@ class PrinterAdapter implements IPrinter{
 }
 
 export {
-    LegacyPrinter, PrinterAdapter
+    LegacyPrinter, PrinterAdapter, IPrinter
 }
