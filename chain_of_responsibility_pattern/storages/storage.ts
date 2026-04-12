@@ -6,14 +6,14 @@ import IStorage from "../interfaces/i_storage";
 
 export default class Storage implements IStorage {
 
-    next: IStorage
+    next: IStorage | null = null
     location: string
     inventory: Array<IMedicine>
     constructor(location: string, inventory: Array<IMedicine>) {
         this.location = location
         this.inventory = inventory
     }
-    find(name: string): ISearchResult {
+    find(name: string): ISearchResult | null {
         console.log(`Searching medicine ${name} in location ${this.location}`)
         if (this.inventory) {
             let index = this.inventory.findIndex(med => {

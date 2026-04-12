@@ -1,17 +1,26 @@
 "use strict"
 
-import IDevice from "../interfaces/i_device";
+export default class Stereo {
+    isOn: boolean = false
+    volume: number = 0
 
-export default class Stereo implements IDevice {
     turnOn(): void {
-        console.log("Stereo : turning on")
+        this.isOn = true
+        console.log("Stereo: turning on")
     }
+
     turnOff(): void {
-        console.log("Stereo : turning off")
+        this.isOn = false
+        console.log("Stereo: turning off")
     }
 
     increaseVolume(): void {
-        console.log("Stereo: increase volume")
+        this.volume++
+        console.log(`Stereo: volume is now ${this.volume}`)
     }
 
+    decreaseVolume(): void {
+        this.volume--
+        console.log(`Stereo: volume is now ${this.volume}`)
+    }
 }

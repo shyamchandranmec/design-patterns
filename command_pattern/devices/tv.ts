@@ -1,17 +1,21 @@
 "use strict"
 
-import IDevice from "../interfaces/i_device"
+export default class TV {
+    isOn: boolean = false
+    currentChannel: number = 1
 
-export default class TV implements IDevice {
     turnOn(): void {
-        console.log("TV : turning on")
-    }
-    turnOff(): void {
-        console.log("TV : turning off")
+        this.isOn = true
+        console.log("TV: turning on")
     }
 
-    changeChannel(): void {
-        console.log("TV: changing channel")
+    turnOff(): void {
+        this.isOn = false
+        console.log("TV: turning off")
     }
-    
+
+    changeChannel(channel: number): void {
+        this.currentChannel = channel
+        console.log(`TV: changing to channel ${channel}`)
+    }
 }
