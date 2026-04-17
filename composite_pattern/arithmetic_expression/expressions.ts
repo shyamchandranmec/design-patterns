@@ -43,6 +43,8 @@ class Expression implements IArithExpression {
             return this.lhs.evaluate() * this.rhs.evaluate()
         } else if (this.operation == OPERATION.DIV) {
             return this.lhs.evaluate() / this.rhs.evaluate()
+        } else {
+            throw new Error(`Unknown operation: ${this.operation}`)
         }
     }
 }
